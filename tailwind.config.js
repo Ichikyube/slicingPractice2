@@ -19,6 +19,7 @@ module.exports = {
       backgroundImage: {
         'mainPattern': "url('images/bg-pattern-intro-desktop.svg')",
         'bgPattern1': "url('images/illustration-editor-desktop.svg')",
+        'Circle': "url('images/bg-pattern-circles.svg')",
         'footerTexture': "url('/img/footer-texture.png')",
       },
       colors: {
