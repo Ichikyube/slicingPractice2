@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "Overpass";
+  font-style: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/overpass/v12/qFdH35WCmI96Ajtm81GlU9s.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjsGyN.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+body {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  margin: 0;
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+header {
+  font-family: "Overpass";
+  background-color: hsl(356deg, 100%, 66%);
+  background-image: url("images/bg-pattern-intro-desktop.svg");
+  border-bottom-left-radius: 5em;
+  position: relative;
+  overflow: hidden;
+  z-index: -5;
+}
+header .cta {
+  text-align: center;
+  font-weight: 600;
+  color: hsl(0deg, 0%, 100%);
+  position: relative;
+  padding-bottom: 6em;
+}
+header .cta h1 {
+  font-size: 3em;
+}
+header .cta a {
+  text-decoration: none;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+header .cta .start {
+  color: hsl(0deg, 0%, 100%);
+  background: hsl(355deg, 100%, 74%);
+}
+header .cta .more {
+  color: hsl(356deg, 100%, 66%);
+  background: hsl(0deg, 0%, 100%);
+}
+
+.bg-pattern {
+  position: absolute;
+  top: -56em;
+  left: -12em;
+  width: 200%;
+  z-index: -1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-inline: auto;
+  padding-top: 3em;
+}
+
+.mainmenu {
+  flex: auto;
+}
+
+.mainNav {
+  display: flex;
+}
+.mainNav #dropdownNavbar {
+  position: absolute;
+  z-index: 100;
+}
+.mainNav #dropdownNavbar ul {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 0.2em;
+  padding: 1em;
+  position: relative;
+  left: 3em;
+  top: 1.5em;
+  box-shadow: 4px 8px 15px 6px rgba(31, 63, 91, 0.25);
+}
+.mainNav #dropdownNavbar ul li {
+  color: hsl(0deg, 0%, 100%);
+  list-style-type: none;
+}
+.mainNav #dropdownNavbar ul li a {
+  color: hsl(240deg, 10%, 16%);
+  text-decoration: none;
+}
+
+footer {
+  background: hsl(240deg, 10%, 16%);
+}
+footer nav ul li ul {
+  padding-left: 0;
+}
+footer nav ul li ul li a {
+  color: hsl(240deg, 2%, 79%);
+}
+
+ul {
+  border-radius: 0.2em;
+  padding: 1em;
+}
+ul li {
+  color: hsl(0deg, 0%, 100%);
+  list-style-type: none;
+  width: 7em;
+  padding-right: 1em;
+}
+ul li a {
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+}
+
+#dropdownNavbarLink {
+  background: none;
+  border: none;
+}
+
+.btn {
+  padding-right: 1em;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.caption {
+  width: 45%;
+}
+
+#satu {
+  padding-left: 5em;
+}
+
+#dua {
+  background-color: hsl(237deg, 17%, 21%);
+  border-top-right-radius: 5em;
+  border-bottom-left-radius: 5em;
+  display: flex;
+  flex-flow: column-reverse;
+  padding-bottom: 3.5em;
+  padding-top: 3em;
+}
+#dua h3 {
+  font-size: xx-large;
+}
+#dua p {
+  font-size: smaller;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+}
+#dua img {
+  max-width: 30%;
+  top: -3.5em;
+  left: 5em;
+  position: absolute;
+  object-fit: contain;
+}
+#dua .caption, #dua p {
+  color: hsl(0deg, 0%, 100%);
+  align-self: flex-end;
+  padding-right: 5em;
+}
+
+#tiga {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6em;
+  margin-bottom: 6em;
+  flex-flow: column;
+}
+#tiga h3 {
+  font-size: xx-large;
+  color: hsl(237deg, 17%, 21%);
+}
+#tiga .caption {
+  align-self: flex-end;
+  padding-right: 5em;
+}
+#tiga img {
+  max-width: 35%;
+  position: absolute;
+  top: 10%;
+}
+
+.featured {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6em;
+  margin-bottom: 6em;
+}
+.featured img {
+  max-width: 55%;
+  position: absolute;
+  top: 10%;
+  left: 60%;
+}
+
+section {
+  position: relative;
+  padding-top: 6em;
+  padding-bottom: 10em;
+  margin-inline: auto;
+  height: fit-content;
+}
+section h1 {
+  text-align: center;
+  padding-bottom: 2em;
+}
+section p {
+  color: hsl(207deg, 13%, 34%);
+}
+
+.container {
+  overflow: hidden;
+  height: fit-content;
+}
+
+/*# sourceMappingURL=style.css.map */

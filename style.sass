@@ -1,0 +1,183 @@
+$LightRed: hsl(356, 100%, 66%)
+$VeryLightRed: hsl(355, 100%, 74%)
+$VeryDarkBlue: hsl(208, 49%, 24%)
+
+$White: hsl(0, 0%, 100%)
+$GrayisBlue: hsl(240, 2%, 79%)
+$VeryDarkGrayishBlue: hsl(207, 13%, 34%)
+$VeryDarkBlackBlue: hsl(240, 10%, 16%)
+$VeryDarkGrayBlue: hsl(237, 17%, 21%)
+$VeryDarkDesaturatedBlue: hsl(237, 23%, 32%)
+@font-face 
+  font-family: 'Overpass'
+  font-style: normal
+  font-display: swap
+  src: url(https://fonts.gstatic.com/s/overpass/v12/qFdH35WCmI96Ajtm81GlU9s.woff2) format('woff2')
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+
+@font-face 
+  font-family: 'Ubuntu'
+  font-style: normal
+  font-display: swap
+  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjsGyN.woff2) format('woff2')
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+
+body
+    font-family: 'Ubuntu'
+    font-weight: 400
+    margin: 0
+    background-color: $White
+header
+    font-family: 'Overpass'
+    background-color: $LightRed
+    background-image: url("images/bg-pattern-intro-desktop.svg")
+    border-bottom-left-radius: 5em
+    position: relative
+    overflow: hidden
+    z-index: -5
+    .cta
+        text-align: center
+        font-weight: 600
+        color: $White
+        position: relative
+        padding-bottom: 6em
+        h1
+            font-size: 3em
+        a
+            text-decoration: none
+            padding: 0.5em
+            
+            border-radius: 1em
+        .start
+            color: $White
+            background: $VeryLightRed
+        .more
+            color: $LightRed
+            background: $White
+.bg-pattern
+    position: absolute
+    top: -56em
+    left: -12em
+    width: 200%
+    z-index: -1
+nav
+    display: flex
+    justify-content: space-between
+    width: 80%
+    margin-inline: auto
+    padding-top: 3em
+.mainmenu
+    flex: auto
+.mainNav
+    display: flex
+    #dropdownNavbar 
+        position: absolute
+        z-index: 100
+        ul
+            background-color: $White
+            border-radius: 0.2em
+            padding: 1em
+            position: relative
+            left: 3em
+            top: 1.5em
+            box-shadow: 4px 8px 15px 6px rgb($VeryDarkBlue, 0.25)
+            li
+                color: $White
+                list-style-type: none
+                a
+                    color: $VeryDarkBlackBlue
+                    text-decoration: none
+footer
+    background: $VeryDarkBlackBlue
+    nav ul li ul 
+        padding-left: 0
+        li a
+            color: $GrayisBlue
+ul  
+    border-radius: 0.2em
+    padding: 1em
+    li
+        color: $White
+        list-style-type: none
+        width: 7em
+        padding-right: 1em
+        a
+            color: $White
+            text-decoration: none    
+#dropdownNavbarLink
+    background: none
+    border: none
+
+.btn
+    padding-right: 1em
+    color: $White
+.caption
+    width: 45%
+#satu
+    padding-left: 5em
+#dua
+    background-color: $VeryDarkGrayBlue
+    border-top-right-radius: 5em
+    border-bottom-left-radius: 5em
+    display: flex
+    flex-flow: column-reverse
+    padding-bottom: 3.5em
+    padding-top: 3em
+    h3
+        font-size: xx-large
+    p
+        font-size: smaller
+        letter-spacing: 2px
+        font-family: sans-serif
+        
+    img
+        max-width: 30%
+        top: -3.5em
+        left: 5em
+        position: absolute
+        object-fit: contain
+    .caption, p
+        color: $White
+        align-self: flex-end
+        padding-right: 5em
+#tiga
+    display: flex
+    justify-content: space-between
+    margin-top: 6em
+    margin-bottom: 6em
+    flex-flow: column
+    h3
+        font-size: xx-large
+        color: $VeryDarkGrayBlue
+    .caption
+        align-self: flex-end
+        padding-right: 5em
+    img
+        max-width: 35%
+        position: absolute
+        top: 10%
+.featured
+    display: flex
+    justify-content: space-between
+    margin-top: 6em
+    margin-bottom: 6em
+    img
+        max-width: 55%
+        position: absolute
+        top: 10%
+        left: 60%
+section
+    position: relative
+    padding-top: 6em
+    padding-bottom: 10em
+    margin-inline: auto
+    height: fit-content
+    h1
+        text-align: center
+        padding-bottom: 2em
+    p
+        color: $VeryDarkGrayishBlue
+
+.container
+    overflow: hidden
+    height: fit-content
