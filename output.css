@@ -419,30 +419,6 @@ video {
   display: none;
 }
 
-@font-face {
-  font-family: "Overpass";
-
-  font-style: normal;
-
-  font-display: swap;
-
-  src: url(https://fonts.gstatic.com/s/overpass/v12/qFdH35WCmI96Ajtm81GlU9s.woff2) format("woff2");
-
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: "Ubuntu";
-
-  font-style: normal;
-
-  font-display: swap;
-
-  src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCv6KVjbNBYlgoCxCvjsGyN.woff2) format("woff2");
-
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -601,12 +577,8 @@ video {
   position: relative;
 }
 
-.-top-\[180\%\] {
-  top: -180%;
-}
-
-.left-6 {
-  left: 1.5rem;
+.bottom-0 {
+  bottom: 0px;
 }
 
 .left-10 {
@@ -617,48 +589,24 @@ video {
   top: 2.5rem;
 }
 
+.top-12 {
+  top: 3rem;
+}
+
 .-right-3\/4 {
   right: -75%;
 }
 
-.-top-\[100\%\] {
-  top: -100%;
-}
-
-.bottom-0 {
-  bottom: 0px;
-}
-
-.right-10 {
-  right: 2.5rem;
-}
-
-.right-\[10rem\] {
-  right: 10rem;
-}
-
-.-right-\[10rem\] {
-  right: -10rem;
-}
-
-.-right-\[14rem\] {
-  right: -14rem;
-}
-
-.-right-\[12rem\] {
-  right: -12rem;
+.-z-10 {
+  z-index: -10;
 }
 
 .-z-50 {
   z-index: -50;
 }
 
-.z-50 {
-  z-index: 50;
-}
-
-.-z-10 {
-  z-index: -10;
+.clear-both {
+  clear: both;
 }
 
 .mx-auto {
@@ -686,8 +634,44 @@ video {
   margin-right: 2.25rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-9 {
+  margin-bottom: 2.25rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
+.mb-64 {
+  margin-bottom: 16rem;
+}
+
+.mb-52 {
+  margin-bottom: 13rem;
 }
 
 .block {
@@ -710,28 +694,24 @@ video {
   height: 95vh;
 }
 
-.h-\[100vw\] {
-  height: 100vw;
+.h-screen {
+  height: 100vh;
 }
 
 .h-4 {
   height: 1rem;
 }
 
+.h-\[576px\] {
+  height: 576px;
+}
+
 .h-full {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-.h-\[60vw\] {
-  height: 60vw;
-}
-
-.h-\[70vw\] {
-  height: 70vw;
+.h-\[720px\] {
+  height: 720px;
 }
 
 .w-screen {
@@ -764,16 +744,22 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-1\/2 {
+  --tw-translate-y: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-wrap {
@@ -812,14 +798,6 @@ video {
   overflow: hidden;
 }
 
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
-.overflow-y-hidden {
-  overflow-y: hidden;
-}
-
 .overflow-y-visible {
   overflow-y: visible;
 }
@@ -840,6 +818,46 @@ video {
   border-bottom-left-radius: 5rem;
 }
 
+.rounded-tr-lg {
+  border-top-right-radius: 0.5rem;
+}
+
+.rounded-bl-lg {
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-tr-2xl {
+  border-top-right-radius: 1rem;
+}
+
+.rounded-tr-3xl {
+  border-top-right-radius: 1.5rem;
+}
+
+.rounded-bl-3xl {
+  border-bottom-left-radius: 1.5rem;
+}
+
+.rounded-tr-full {
+  border-top-right-radius: 9999px;
+}
+
+.rounded-bl-full {
+  border-bottom-left-radius: 9999px;
+}
+
+.rounded-tr-\[3rem\] {
+  border-top-right-radius: 3rem;
+}
+
+.rounded-bl-\[3rem\] {
+  border-bottom-left-radius: 3rem;
+}
+
+.rounded-tr-\[5rem\] {
+  border-top-right-radius: 5rem;
+}
+
 .bg-mywhite {
   --tw-bg-opacity: 1;
   background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
@@ -848,6 +866,11 @@ video {
 .bg-veryLightRed {
   --tw-bg-opacity: 1;
   background-color: hsl(355 100% 74% / var(--tw-bg-opacity));
+}
+
+.bg-veryDarkGrayBlue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(237 17% 21% / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -872,32 +895,16 @@ video {
   --tw-gradient-to: hsl(353, 100%, 62%);
 }
 
-.bg-cover {
-  background-size: cover;
+.bg-auto {
+  background-size: auto;
 }
 
 .bg-contain {
   background-size: contain;
 }
 
-.bg-auto {
-  background-size: auto;
-}
-
 .bg-right {
   background-position: right;
-}
-
-.bg-left-bottom {
-  background-position: left bottom;
-}
-
-.bg-right-bottom {
-  background-position: right bottom;
-}
-
-.bg-bottom {
-  background-position: bottom;
 }
 
 .bg-no-repeat {
@@ -931,10 +938,6 @@ video {
   padding-top: 7rem;
 }
 
-.text-left {
-  text-align: left;
-}
-
 .text-center {
   text-align: center;
 }
@@ -948,31 +951,21 @@ video {
 }
 
 .font-ubuntu {
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
 }
 
 .font-overpass {
-  font-family: Overpass;
+  font-family: Overpass, sans-serif;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .font-medium {
@@ -989,6 +982,10 @@ video {
 
 .font-normal {
   font-weight: 400;
+}
+
+.font-thin {
+  font-weight: 100;
 }
 
 .text-mywhite {
@@ -1009,6 +1006,11 @@ video {
 .text-veryDarkBlue {
   --tw-text-opacity: 1;
   color: hsl(208 49% 24% / var(--tw-text-opacity));
+}
+
+.text-grayisBlue {
+  --tw-text-opacity: 1;
+  color: hsl(240 2% 79% / var(--tw-text-opacity));
 }
 
 .shadow-md {

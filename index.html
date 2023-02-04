@@ -9,7 +9,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./output.css">
   <title>Frontend Mentor | [Blogr]</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;500;600;700;800&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
@@ -148,33 +153,39 @@
       <a class="btn more bg-mywhite px-4 py-2 text-lightRed font-bold rounded-full mr-9" href="#" role="button">Learn More</a>
     </div>
   </header>
-  <section id="satu" class="pt-28 h-screen relative text-veryDarkBlue overflow-x-hidden">
-    <div class="absolute w-full h-full bg-contain -right-[12rem] -z-10 bg-right bg-no-repeat bg-bgPattern1 overflow-y-visible"></div>
+  <section id="satu" class="pt-28 mb-52 h-[576px] relative text-veryDarkBlue">
+    <div class="absolute w-full h-full bg-contain top-12 -z-10 bg-right bg-no-repeat bg-bgPattern1 overflow-y-visible" style="background-position-x:123%"></div>
     <h1 class="text-center text-3xl ">Designed for the future</h1>
     <div class="featured grid gap-4 grid-cols-2 w-10/12 mx-auto mt-20">
       <div class="caption text-justify">
-        <h4 class="">Introducing an extensible editor</h4>
-        <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+        <h4 class="mt-8 mb-4">Introducing an extensible editor</h4>
+        <p class="text-grayisBlue font-thin">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
           The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
           videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
           change the looks of a blog.
         </p>
-        <h4 class="">Robust content management</h4>
-        <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog
+        <h4 class="mt-8 mb-4">Robust content management</h4>
+        <p class="text-grayisBlue font-thin">Flexible content management enables users to easily move through posts. Increase the usability of your blog
           by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
         </p>
       </div>
       <!-- <img class="-right-3/4" src="images/illustration-editor-desktop.svg" alt="" srcset=""> -->
     </div>
+    <div class="clear-both"></div>
   </section>
   <section id="dua" class="h-screen">
-    <div class="caption">
-      <h3>State of the Art Infrastructure</h3>
-      <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
-        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-      </p>
+    <div class="absolute w-full -z-50 h-screen bg-contain bg-veryDarkGrayBlue rounded-tr-[5rem] rounded-bl-[5rem]" style="background-position-x:123%"></div>
+    <div class="flex mx-auto w-10/12 relative">
+      <img src="images/illustration-phones.svg" alt="" srcset="">
+      <div class="caption translate-y-1/2 text-white">
+        <h3>State of the Art Infrastructure</h3>
+        <p class="mt-4 font-thin">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </p>
+      </div>
+      
     </div>
-    <img src="images/illustration-phones.svg" alt="" srcset="">
+    
   </section>
   <section id="tiga" class="h-screen">
     <div class="caption">

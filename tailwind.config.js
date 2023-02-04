@@ -3,8 +3,8 @@ module.exports = {
   content: ["*.{html,js}"],
   theme: {
     fontFamily: {
-      'ubuntu': "Ubuntu",
-      'overpass': "Overpass",
+      'ubuntu': ["Ubuntu", 'sans-serif'],
+      'overpass': ["Overpass", 'sans-serif'],
     },
     container: {
       padding: {
