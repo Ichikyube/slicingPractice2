@@ -36,9 +36,9 @@
           <img src="images/logo.svg" class="" alt="Blogr Logo" />
         </a>
         <div x-show="!mobile || open" class="w-full ml-6 lg:flex">
-          <ul x-data="{active:null, open: false}"  x-on:click.outside="active = null" class="absolute flex flex-col gap-10 p-5 bg-gray-200 w-fit lg:w-full lg:bg-transparent lg:static lg:flex-row">
-            <li>Product
-              <button x-on:click="[active = 'product', open = !open]" x-on:mouseover="[active = 'product', open = true]" class="w-4 h-4 align-middle" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
+          <ul x-data="{active:null, open: false}"  x-on:click.outside="active = null" class="absolute flex flex-col gap-10 p-5 bg-gray-200 rounded-md right-10 w-fit lg:w-full lg:bg-transparent lg:static lg:flex-row">
+            <li class="group"><span class="relative pb-1 text-white after:transition-transform after:duration-500 after:ease-out after:absolute after:bottom-0 after:left-0 after:block after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-red-500 after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100">Product</span>
+              <button x-on:click="[active = 'product', open = !open]" x-on:mouseover="[active = 'product', open = true]" class="w-4 h-4 align-middle group-hover:animate-bounce" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
                 <svg aria-hidden="false" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -47,7 +47,7 @@
               </button>
               <!-- Dropdown menu -->
               <div x-show="active == 'product' && open" id="dropdownNavbar" x-on:mouseleave="open=false" class="absolute">
-                <ul class="relative top-0 z-50 p-5 rounded-md shadow-md backdrop-blur-xl bg-white/30 left-10" aria-labelledby="dropdownLargeButton">
+                <ul class="relative z-50 p-5 rounded-md shadow-md top-1 backdrop-blur-xl bg-white/30 left-10" aria-labelledby="dropdownLargeButton">
                   <li>
                     <a href="#satu"
                       class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Overview</a>
@@ -71,8 +71,8 @@
                 </ul>
               </div>
             </li>
-            <li>Company
-              <button x-on:click="[active = 'company', open = !open]" x-on:mouseover="[active = 'company', open = true]"  class="w-4 h-4 align-middle" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
+            <li class="group"><span class="relative pb-1 text-white after:transition-transform after:duration-500 after:ease-out after:absolute after:bottom-0 after:left-0 after:block after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-red-500 after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100">Company</span>
+              <button x-on:click="[active = 'company', open = !open]" x-on:mouseover="[active = 'company', open = true]"  class="w-4 h-4 align-middle group-hover:animate-bounce" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
                 <svg aria-hidden="false" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -81,7 +81,7 @@
               </button>
               <!-- Dropdown menu -->
               <div x-show="active == 'company' && open" id="dropdownNavbar" x-on:mouseleave="open=false" class="absolute">
-                <ul class="relative top-0 z-50 p-5 rounded-md shadow-md backdrop-blur-xl bg-white/30 left-10" aria-labelledby="dropdownLargeButton">
+                <ul class="relative z-50 p-5 rounded-md shadow-md top-1 backdrop-blur-xl bg-white/30 left-10" aria-labelledby="dropdownLargeButton">
                   <li>
                     <a href="#dua"
                       class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">About</a>
@@ -101,8 +101,8 @@
                 </ul>
               </div>
             </li>
-            <li>Connect
-              <button x-on:click="[active = 'connect', open = !open]" x-on:mouseover="[active = 'connect', open = true]"  class="w-4 h-4 align-middle" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
+            <li class="group"><span class="relative pb-1 text-white after:transition-transform after:duration-500 after:ease-out after:absolute after:bottom-0 after:left-0 after:block after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-red-500 after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100">Connect</span>
+              <button x-on:click="[active = 'connect', open = !open]" x-on:mouseover="[active = 'connect', open = true]"  class="w-4 h-4 align-middle group-hover:animate-bounce" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
                 <svg aria-hidden="false" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -111,7 +111,7 @@
               </button>
               <!-- Dropdown menu -->
               <div x-show="active == 'connect' && open" id="dropdownNavbar" x-on:mouseleave="open=false" class="absolute" id="dropdownNavbar" class="hidden">
-                <ul class="relative top-0 z-50 p-5 rounded-md shadow-md backdrop-blur-xl bg-white/30 left-10" aria-labelledby="dropdownLargeButton">
+                <ul class="relative z-50 p-5 rounded-md shadow-md top-1 backdrop-blur-xl bg-white/30 left-10" aria-labelledby="dropdownLargeButton">
                   <li>
                     <a href="#tiga"
                       class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Contact</a>
@@ -130,7 +130,7 @@
           </ul>
         </div>
         <div x-show="!mobile" class="flex content-end justify-end w-full font-bold">
-          <a type="button" class="px-6 py-2 mr-2 cursor-pointer btn" href="#" role="button">Login</a>
+          <a type="button" class="px-6 py-2 mr-2 cursor-pointer group btn" href="#" role="button"><span class="relative pb-1 text-white after:transition-transform after:duration-500 after:ease-out after:absolute after:bottom-0 after:left-0 after:block after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-red-600 after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100">Login</span></a>
           <a class="px-6 py-2 font-extrabold btn rounded-2xl bg-mywhite text-lightRed" href="#" role="button">Sign Up</a>
         </div>
         <button x-show="mobile" x-on:click="[open = !open, console.log(open)]" class="w-9 h-9" type="button">
@@ -148,8 +148,8 @@
           <h6 class="mt-4 font-normal">Grow your audience and build your online brand</h6>
         </div>
         <div class="flex justify-center mx-auto mt-16">
-          <a class="px-4 py-2 rounded-full btn start bg-veryLightRed mr-9" href="#" role="button">Start for Free</a>
-          <a class="px-4 py-2 font-bold rounded-full btn more bg-mywhite text-lightRed mr-9" href="#" role="button">Learn More</a>
+          <a class="px-4 py-2 rounded-full btn start bg-veryLightRed  hover:text-white hover:shadow-[inset_13rem_0_0_0] hover:shadow-gradredto duration-[400ms,700ms] transition-[color,box-shadow]" mr-9" href="#" role="button">Start for Free</a>
+          <a class="px-4 py-2 font-bold transition duration-200 ease-in transform rounded-full btn more bg-mywhite text-lightRed mr-9 hover:bg-gradRed hover:shadow-xl hover:text-white hover:border-transparent hover:-translate-y-1 active:translate-y-0" href="#" role="button">Learn More</a>
         </div>
       </div>
     </div>
@@ -244,7 +244,7 @@
     
     <!-- button -->
     <button x-data="topBtn" @click="scrolltoTop" id="topButton"
-      class="fixed z-10 hidden p-3 text-black rounded-full shadow-md bottom-10 right-10 animate-bounce">
+      class="fixed z-10 hidden p-3 text-black rounded-full shadow-md animate-gradient-y bottom-10 right-10 bg-gradient-to-b from-gradredto/70 via-veryLightRed to-transparent animate-bounce">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18">
