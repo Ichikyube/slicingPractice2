@@ -28,130 +28,129 @@
 
 <body class="font-medium font-ubuntu">
   <header x-data="{mobile:(window.innerWidth < 992) ? true : false, open:false}" class="font-overpass text-mywhite bg-gradient-to-r min-h-[576px] h-[95vh] from-gradRed to-gradredto rounded-bl-[5rem] relative overflow-hidden">
-    <div class="absolute bottom-0 w-screen h-screen bg-no-repeat bg-auto -z-10 bg-mainPattern" style="background-position-x: 25%; background-position-y: 52%;"></div>
-    <div x-text="console.log(mobile)"></div>
-    <nav x-on:resize.window.debounce="mobile = (window.innerWidth < 992) ? true : false" class="container flex items-center justify-between w-10/12 mx-auto translate-y-11">
-      <a href="#" class="flex items-center w-4/12">
-        <img src="images/logo.svg" class="" alt="Blogr Logo" />
-      </a>
-      <div class="w-full ml-6 lg:flex">
-        <ul x-show="!mobile || open" x-data="{active:null, open: false}"  x-on:click.outside="active = null" class="flex w-full gap-10">
-          <li>Product
-            <button x-on:click="[active = 'product', open = !open]" x-on:mouseover="[active = 'product', open = true]" class="w-4 h-4 align-middle" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
-              <svg aria-hidden="false" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </button>
-            <!-- Dropdown menu -->
-            <div x-show="active == 'product' && open" id="dropdownNavbar" x-on:mouseleave="open=false" class="absolute">
-              <ul class="relative top-0 z-50 p-5 rounded-md shadow-md backdrop-blur-xl bg-white/30 left-10" aria-labelledby="dropdownLargeButton">
-                <li>
-                  <a href="#"
-                    class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Overview</a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Pricing</a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Marketplace</a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Features</a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Integrations</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>Company
-            <button x-on:click="[active = 'company', open = !open]" x-on:mouseover="[active = 'company', open = true]"  class="w-4 h-4 align-middle" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
-              <svg aria-hidden="false" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </button>
-            <!-- Dropdown menu -->
-            <div x-show="active == 'company' && open" id="dropdownNavbar" x-on:mouseleave="open=false" class="absolute">
-              <ul class="relative top-0 z-50 p-5 rounded-md shadow-md backdrop-blur-xl bg-white/30 left-10" aria-labelledby="dropdownLargeButton">
-                <li>
-                  <a href="#"
-                    class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">About</a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Team</a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Blog</a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Careers</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>Connect
-            <button x-on:click="[active = 'connect', open = !open]" x-on:mouseover="[active = 'connect', open = true]"  class="w-4 h-4 align-middle" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
-              <svg aria-hidden="false" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </button>
-            <!-- Dropdown menu -->
-            <div x-show="active == 'connect' && open" id="dropdownNavbar" x-on:mouseleave="open=false" class="absolute" id="dropdownNavbar" class="hidden">
-              <ul class="relative top-0 z-50 p-5 rounded-md shadow-md backdrop-blur-xl bg-white/30 left-10" aria-labelledby="dropdownLargeButton">
-                <li>
-                  <a href="#"
-                    class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Contact</a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Newsletter</a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">LinkedIn</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div x-show="!mobile" class="flex content-end justify-end w-full font-bold">
-        <a type="button" class="px-6 py-2 mr-2 cursor-pointer btn" href="#" role="button">Login</a>
-        <a class="px-6 py-2 font-extrabold btn rounded-2xl bg-mywhite text-lightRed" href="#" role="button">Sign Up</a>
-      </div>
-      <button x-show="mobile" x-on:click="open = !open" class="w-9 h-9"  type="button">
-        <span class="sr-only">Open main menu</span>
-        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd"></path>
-        </svg>
-      </button>
-    </nav>
-    <div class="z-40 mt-40 text-center">
-      <div class="pb-4 ">
-        <h1 class="text-5xl font-bold text-white">A modern publishing platform</h1>
-        <h6 class="mt-4 font-normal">Grow your audience and build your online brand</h6>
-      </div>
-      <div class="flex justify-center mx-auto mt-16">
-        <a class="px-4 py-2 rounded-full btn start bg-veryLightRed mr-9" href="#" role="button">Start for Free</a>
-        <a class="px-4 py-2 font-bold rounded-full btn more bg-mywhite text-lightRed mr-9" href="#" role="button">Learn More</a>
+    <div class="absolute top-0 bottom-0 w-screen h-screen bg-no-repeat bg-auto bg-mainPattern" style="background-position-x: 25%; background-position-y: 52%;">
+      <nav x-on:resize.window.debounce="mobile = (window.innerWidth < 992) ? true : false" class="container flex items-center justify-between w-10/12 mx-auto translate-y-11">
+        <a href="#" class="flex items-center w-4/12">
+          <img src="images/logo.svg" class="" alt="Blogr Logo" />
+        </a>
+        <div class="w-full ml-6 lg:flex">
+          <ul x-show="!mobile || open" x-data="{active:null, open: false}"  x-on:click.outside="active = null" class="flex w-full gap-10">
+            <li>Product
+              <button x-on:click="[active = 'product', open = !open]" x-on:mouseover="[active = 'product', open = true]" class="w-4 h-4 align-middle" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
+                <svg aria-hidden="false" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div x-show="active == 'product' && open" id="dropdownNavbar" x-on:mouseleave="open=false" class="absolute">
+                <ul class="relative top-0 z-50 p-5 rounded-md shadow-md backdrop-blur-xl bg-white/30 left-10" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Overview</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Marketplace</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Features</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Integrations</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>Company
+              <button x-on:click="[active = 'company', open = !open]" x-on:mouseover="[active = 'company', open = true]"  class="w-4 h-4 align-middle" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
+                <svg aria-hidden="false" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div x-show="active == 'company' && open" id="dropdownNavbar" x-on:mouseleave="open=false" class="absolute">
+                <ul class="relative top-0 z-50 p-5 rounded-md shadow-md backdrop-blur-xl bg-white/30 left-10" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">About</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Team</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Careers</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>Connect
+              <button x-on:click="[active = 'connect', open = !open]" x-on:mouseover="[active = 'connect', open = true]"  class="w-4 h-4 align-middle" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar">
+                <svg aria-hidden="false" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div x-show="active == 'connect' && open" id="dropdownNavbar" x-on:mouseleave="open=false" class="absolute" id="dropdownNavbar" class="hidden">
+                <ul class="relative top-0 z-50 p-5 rounded-md shadow-md backdrop-blur-xl bg-white/30 left-10" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Contact</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">Newsletter</a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:text-black dark:hover:bg-gray-600 dark:hover:text-white">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div x-show="!mobile" class="flex content-end justify-end w-full font-bold">
+          <a type="button" class="px-6 py-2 mr-2 cursor-pointer btn" href="#" role="button">Login</a>
+          <a class="px-6 py-2 font-extrabold btn rounded-2xl bg-mywhite text-lightRed" href="#" role="button">Sign Up</a>
+        </div>
+        <button x-show="mobile" x-on:click="open = !open" class="w-9 h-9"  type="button">
+          <span class="sr-only">Open main menu</span>
+          <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </nav>
+      <div class="z-40 mt-40 text-center">
+        <div class="pb-4 ">
+          <h1 class="text-5xl font-bold text-white">A modern publishing platform</h1>
+          <h6 class="mt-4 font-normal">Grow your audience and build your online brand</h6>
+        </div>
+        <div class="flex justify-center mx-auto mt-16">
+          <a class="px-4 py-2 rounded-full btn start bg-veryLightRed mr-9" href="#" role="button">Start for Free</a>
+          <a class="px-4 py-2 font-bold rounded-full btn more bg-mywhite text-lightRed mr-9" href="#" role="button">Learn More</a>
+        </div>
       </div>
     </div>
-
   </header>
   <section id="satu" class="pt-28 mb-52 h-max md:h-[576px] lg:h-[576px] flex flex-col relative text-veryDarkBlue">
     <div class="absolute w-full h-full overflow-y-visible bg-right bg-no-repeat bg-contain top-12 -z-10 bg-none md:bg-bgPattern1 lg:bg-bgPattern1" style="background-position-x:123%"></div>
